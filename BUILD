@@ -13,6 +13,6 @@ scala_test(
 
 scala_specs_test(
   name = "greeter_specs2",
-  srcs = ["src/test/scala/com/example/Specs2GreeterSpec.scala"],
+  srcs = ["src/test/scala/com/example/Specs2GreeterSpec.scala","src/test/scala/com/example/OneEqualsOneSpec.scala"],
   deps = [":greeter"],
 )
