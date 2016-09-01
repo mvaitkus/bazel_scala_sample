@@ -19,6 +19,6 @@ scala_specs2_test(
 
 scala_specs2_junit_test(
   name = "greeter_specs2_junit",
-  srcs = ["src/test/scala/com/example/Specs2GreeterSpec.scala","src/test/scala/com/example/OneEqualsOneSpec.scala"],
+  srcs = ["src/test/scala/com/example/Specs2GreeterWithJUnitSpec.scala","src/test/scala/com/example/OneEqualsOneWithJUnitSpec.scala"],
   deps = [":greeter"],
 )
