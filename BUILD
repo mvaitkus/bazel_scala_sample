@@ -1,4 +1,4 @@
-load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library", "scala_binary", "scala_test", "scala_specs_test")
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library", "scala_binary", "scala_test", "scala_specs2_test", "scala_specs2_junit_test")
 
 scala_library(
   name = "greeter",
@@ -11,8 +11,14 @@ scala_test(
   deps = [":greeter"],
 )
 
-scala_specs_test(
+scala_specs2_test(
   name = "greeter_specs2",
+  srcs = ["src/test/scala/com/example/Specs2GreeterSpec.scala","src/test/scala/com/example/OneEqualsOneSpec.scala"],
+  deps = [":greeter"],
+)
+
+scala_specs2_junit_test(
+  name = "greeter_specs2_junit",
   srcs = ["src/test/scala/com/example/Specs2GreeterSpec.scala","src/test/scala/com/example/OneEqualsOneSpec.scala"],
   deps = [":greeter"],
 )
